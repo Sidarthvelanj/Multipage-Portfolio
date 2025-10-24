@@ -3,18 +3,20 @@ import { Code2, Palette, Rocket, Lightbulb } from 'lucide-react';
 
 const About = () => (
   <PageWrapper>
-    <section className="min-h-screen px-6 py-20 transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white">
+   <section className="min-h-screen px-4 sm:px-6 py-16 sm:py-20 transition-colors duration-300 bg-white text-black dark:bg-black dark:text-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
-        <p className="text-lg leading-relaxed mb-4 text-gray-700 dark:text-gray-300">
-          I'm <span className="font-semibold text-black dark:text-white">Sidarth Velan</span>, a frontend developer and project engineer intern specializing in <span className="font-semibold text-black dark:text-white">AI and applications</span>. Based in Bangalore, I’m passionate about crafting clean, responsive, and accessible web experiences that blend thoughtful design with practical functionality.
-        </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">About Me</h2>
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 text-gray-700 dark:text-gray-300">
+              I'm <span className="font-semibold text-black dark:text-white">Sidarth Velan</span>...
+          </p>
+
         <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
           My core strengths lie in building modular React interfaces, optimizing user flows, and adapting quickly to evolving tech ecosystems. Whether it's designing intuitive layouts, integrating modern libraries, or solving real-world problems with AI-driven solutions, I approach every challenge with clarity, curiosity, and a drive to improve.
         </p>
       </div>
 
-      <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
+
         {[
           {
             icon: <Code2 className="w-6 h-6 text-black dark:text-white" />,
@@ -39,13 +41,13 @@ const About = () => (
         ].map((skill, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg bg-gray-100 dark:bg-neutral-900 hover:scale-[1.02] transition-transform duration-300"
-          >
+            className="p-4 sm:p-6 rounded-lg shadow-lg bg-gray-100 dark:bg-neutral-900 hover:scale-[1.02] transition-transform duration-300"
+        >
             <div className="flex items-center gap-4 mb-4">
               {skill.icon}
               <h3 className="text-xl font-semibold">{skill.title}</h3>
             </div>
-            <p className="text-sm text-gray-700 dark:text-gray-300">{skill.desc}</p>
+            <p clasName="text-sm text-gray-700 dark:text-gray-300">{skill.desc}</p>
           </div>
         ))}
       </div>
@@ -54,10 +56,11 @@ const About = () => (
         <a
           href="/SidarthVelan_Resume.pdf"
           download
-          className="inline-block px-6 py-3 rounded bg-black text-white dark:bg-white dark:text-black hover:bg-neutral-800 dark:hover:bg-gray-200 transition-colors duration-300"
+          className="inline-block px-5 py-2 sm:px-6 sm:py-3 rounded bg-black text-white dark:bg-white dark:text-black hover:scale-105 hover:bg-neutral-800 dark:hover:bg-gray-200 transition-all duration-300"
         >
           Download Resume
         </a>
+
       </div>
     </section>
   </PageWrapper>
